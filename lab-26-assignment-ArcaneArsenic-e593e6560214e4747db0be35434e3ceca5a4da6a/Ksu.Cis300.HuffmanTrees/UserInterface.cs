@@ -14,7 +14,7 @@ using KansasStateUniversity.TreeViewer2;
 using Ksu.Cis300.PriorityQueueLibrary;
 using Ksu.Cis300.ImmutableBinaryTrees;
 using System.IO;
-
+using System.Windows.Forms.VisualStyles;
 
 namespace Ksu.Cis300.HuffmanTrees
 {
@@ -88,7 +88,8 @@ namespace Ksu.Cis300.HuffmanTrees
                     BinaryTreeNode<byte> t = null;
 
                     // Add code to build the Huffman tree and assign it to t.
-                    HuffBuild(freqTableBuilder(Convert.ToString(sender)));
+                    string temp = sender.ToString();
+                    HuffBuild(freqTableBuilder(temp));
 
                     new TreeForm(t, 100).Show();
                 }
